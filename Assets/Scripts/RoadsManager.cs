@@ -139,15 +139,4 @@ public class RoadsManager : MonoBehaviour
         _manager.DestroyEntity(_manager.GetAllEntities());
         SceneManager.LoadScene(0);
     }
-    
-    /*private void Update()
-    {
-        foreach (var car in Cars)
-        {
-            var t = _manager.GetComponentData<Translation>(car);
-            var p = _manager.GetComponentData<PathHelper>(car);
-            var s = _manager.GetComponentData<MoveSpeed>(car);
-            Debug.Log("index in queue = " + p.CurrentIndexInRoad + " pos = " + t.Value + " speed = " + s.CurrentSpeed);
-        }
-    }*/
 }
