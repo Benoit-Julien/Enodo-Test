@@ -123,6 +123,15 @@ public class GridManager : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void Exit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
+
     private IEnumerator ErrorCoroutine(float second)
     {
         yield return new WaitForSeconds(second);
